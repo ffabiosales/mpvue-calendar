@@ -77,7 +77,7 @@
   import Swipe from './components/swipe/index.vue';
   import Slide from './components/swipe/slide.vue';
   import Timetable from './components/timetable/index.vue';
-  import { delay, enWeeks, getToday, isZh, zhWeeks, computedNextMonth, computedPrevMonth,
+  import { delay, ptWeeks, getToday, isZh, zhWeeks, computedNextMonth, computedPrevMonth,
     getDateByCount, date2ymd, getPrevDate, getNextDate, getSomeNextMonths, getMonths,
   } from './components/utils';
   import './style.less';
@@ -227,7 +227,7 @@
 
         const language = isZh(propLanguage?.value) ? 'zh': 'en';
         const weeksArray = {
-          en: enWeeks,
+          en: ptWeeks,
           zh: zhWeeks,
         }[language];
 
