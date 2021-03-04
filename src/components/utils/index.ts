@@ -35,17 +35,17 @@ function isZh(languageValue?: string) {
   return language() === 'zh-cn';
 }
 
-const enWeeks = ['Sun', 'Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat'];
+const ptWeeks = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'];
 const zhWeeks = ['周日', '周一', '周二', '周三', '周四', '周五', '周六'];
-const enMonths = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
+const ptMonths = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'];
 const zhMonths = ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'];
 
 function getWeeks(languageParam: string) {
-  return isZh(languageParam) ? zhWeeks : enWeeks;
+  return isZh(languageParam) ? zhWeeks : ptWeeks;
 }
 
 function getMonths(languageParam: string | undefined) {
-  return isZh(languageParam) ? zhMonths : enMonths;
+  return isZh(languageParam) ? zhMonths : ptMonths;
 }
 
 function computedNextMonth(month: string | number) {
@@ -125,7 +125,7 @@ export {
   language,
   offloadFn,
   zhWeeks,
-  enWeeks,
+  ptWeeks,
   date2ymd,
   getDateByCount,
   computedNextMonth,
